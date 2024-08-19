@@ -1,6 +1,6 @@
 # hw_2.1
 
-print("Enter 4-significant number: ")
+print("Please, enter 4-significant number: ")
 number = int(input())
 print(str(number))
 n1=number//1000
