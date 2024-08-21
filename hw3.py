@@ -3,24 +3,51 @@
 # Користувачеві пропонується почерзі ввести числа та дію над цими числами, а програма,
 # виходячи з дії, обчислює та друкує результат.
 # Зробити перевірку на те, що при діленні дільник не дорівнює 0!
-print("Please, enter first number: ")
-a = int(input())
-print("Please, enter second number: ")
-b = int(input())
-print("Please, enter number of action : ")
-print(" 1) Addition \n 2) Deletion \n 3) Multiplication \n 4) Division")
-action = int(input())
-match action:
-    case 1:
-        print(a+b)
-    case 2:
-        print(a-b)
-    case 3:
-        print(a*b)
-    case 4:
-        if b == 0:
-            print("Ouups! Division by zero is impossible!")
-        else:
-            print(a/b)
-    case _:
-        print("Invalid option, please, try again")
+# print("Please, enter first number: ")
+# a = int(input())
+# print("Please, enter second number: ")
+# b = int(input())
+# print("Please, enter number of action : ")
+# print(" 1) Addition \n 2) Deletion \n 3) Multiplication \n 4) Division")
+# action = int(input())
+# match action:
+#     case 1:
+#         print(a+b)
+#     case 2:
+#         print(a-b)
+#     case 3:
+#         print(a*b)
+#     case 4:
+#         if b == 0:
+#             print("Ouups! Division by zero is impossible!")
+#         else:
+#             print(a/b)
+#     case _:
+#         print("Invalid option, please, try again")
+
+
+# hw_3.2
+# Перемістити елемент у списку
+# Ваша програма має перенести останній елемент списку з кінця на початок, тобто, останній елемент списку має стати першим.
+# Послідовність інших елементів не має змінюватися.
+# Порожній список або список з одним елементом повинен залишитися незмінним.
+# Кількість елементів у списку може бути будь-яким – нуль та більше!
+# Приклади:
+# [12, 3, 4, 10] => [10, 12, 3, 4]
+# [1] => [1]
+# [] => []
+# [12, 3, 4, 10, 8] => [8, 12, 3, 4, 10
+# Для перевірки коректності роботи Вашого коду використовуйте приклади вище.
+# Робити запит на введення даних від користувача не потрібно.
+
+# arr = [12, 3, 4, 10]
+# arr = [1]
+arr = []
+# arr = [12, 3, 4, 10, 8]
+
+if len(arr) == 0:
+    print(arr)
+else:
+    arr.insert(0, arr[-1])
+    arr.pop()
+    print(arr)
