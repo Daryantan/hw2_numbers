@@ -32,20 +32,37 @@
 # [] => 0
 # Для перевірки коректності роботи Вашого коду використовуйте приклади вище. Робити запит на введення даних від користувача не потрібно.
 
-arr = [0, 1, 7, 2, 4, 8]
+# arr = [0, 1, 7, 2, 4, 8]
 # arr = [1, 3, 5]
 # arr = [6]
 # arr = []
-summ=0
-if len(arr) == 0:
-    summ = 0
-else:
-    for i in range(0, len(arr), 2):
-
-     summ = summ + arr[i]
-    summ = summ * arr[-1]
-print(summ)
+# summ=0
+# if len(arr) == 0:
+#     summ = 0
+# else:
+#     for i in range(0, len(arr), 2):
+#
+#      summ = summ + arr[i]
+#     summ = summ * arr[-1]
+# print(summ)
 
 
 # hw_4.3
 
+# Створіть список випадкових чисел із випадковою кількістю елементів від 3 до 10.
+# Ваше завдання - створити новий список з 3 елементів початкового списку - першим, третім і другим з кінця. Приклад:
+# [1, 2, 3, 4, 5, 6, 7, 9] == [1, 3, 7]
+# [1, 1, 2, 1] == [1, 2, 2]
+# [6, 3, 7] == [6, 7, 3]
+
+import random
+NUMS_SIZE = random.randint(3, 10)
+numbers = []
+for i in range(NUMS_SIZE):
+    numbers.append(random.randint(1, 10))
+print(numbers)
+arr = []
+arr.insert(0, numbers[0])
+arr.insert(1, numbers[2])
+arr.append(numbers[-2])
+print(arr)
