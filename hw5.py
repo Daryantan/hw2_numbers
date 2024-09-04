@@ -28,7 +28,6 @@
 import string
 import keyword
 
-# Введений рядок для перевірки
 text = '_'
 # text = '__'
 # text = '___'
