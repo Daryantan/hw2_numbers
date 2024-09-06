@@ -21,25 +21,52 @@
 # 22493 -> 0 днів, 06:14:53
 # 7948799 -> 91 день, 23:59:59
 
-num = int(input("Please, enter quantity of seconds: "))
-if num < 8640000 and num >= 0:
-    days = num // 86400
-    hours = num % 86400 // 3600
-    minutes = num % 86400 % 3600 // 60
-    seconds = num % 86400 % 3600 % 60
+# num = int(input("Please, enter quantity of seconds: "))
+# if num < 8640000 and num >= 0:
+#     days = num // 86400
+#     hours = num % 86400 // 3600
+#     minutes = num % 86400 % 3600 // 60
+#     seconds = num % 86400 % 3600 % 60
+#
+#     if days < 5 and days > 1 or days < 25 and days > 31:
+#         pdays = "дні"
+#     elif days == 1 or days == 21 or days == 21 or days == 91:
+#         pdays = "день"
+#     else:
+#         pdays = "днів"
+#
+#     days_str = str(days).zfill(2)
+#     hours_str = str(hours).zfill(2)
+#     minutes_str = str(minutes).zfill(2)
+#     seconds_str = str(seconds).zfill(2)
+#
+#     print(days_str, " ", pdays, ',', " ", hours_str, ":", minutes_str, ":", seconds_str, sep="")
+# else:
+#     print("Ouups! incorrect value!")
 
-    if days < 5 and days > 1 or days < 25 and days > 31:
-        pdays = "дні"
-    elif days == 1 or days == 21 or days == 21 or days == 91:
-        pdays = "день"
-    else:
-        pdays = "днів"
+# hw_6.3
+# Добуток чисел
+# Ваше завдання — написати програму, яка перемножує всі цифри, введені користувачем цілого числа,
+# поки воно не стане менше або дорівнювати 9.
+# Користувач вводить число з клавіатури.
+# Приклади:
+# 999 -> 2 # Ось чому - 999 розбиваємо на цифри і перемножуємо 9 * 9 * 9 = 729,
+# Потім 7 * 2 * 9 = 126, потім 1 * 2 * 6 = 12 і в результаті 1 * 2 = 2
+# 1000 -> 0
+# 423 -> 8
+# 33 -> 9
+# 25 -> 0
+# 1 -> 1
+print("Please, enter number: ")
+number = int(input())
 
-    days_str = str(days).zfill(2)
-    hours_str = str(hours).zfill(2)
-    minutes_str = str(minutes).zfill(2)
-    seconds_str = str(seconds).zfill(2)
+while number > 9:
+    multi1 = 1
 
-    print(days_str, " ", pdays, ',', " ", hours_str, ":", minutes_str, ":", seconds_str, sep="")
-else:
-    print("Ouups! incorrect value!")
+    while number > 0:
+        multi1 *= number % 10
+        number //= 10
+    number = multi1
+
+print("Result:", number)
+
