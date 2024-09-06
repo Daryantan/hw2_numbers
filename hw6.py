@@ -1,3 +1,23 @@
+# hw_6.1
+# Діапазон букв
+# Користувач вводить через дефіс дві літери, Ваше завдання написати програму, яка повертатиме всі символи між ними включно.
+# Жодних перевірок на помилку робити не треба, мінімальне значення завжди менше або дорівнює максимальному.
+# Підказка: Використовуйте модуль string , у якому є string.ascii_letters, з усім набором потрібних букв
+# Приклад:
+# "a-c" -> abc
+# "a-a" -> a
+# "s-H" -> stuvwxyzABCDEFGH
+# "a-A" -> abcdefghijklmnopqrstuvwxyzA
+
+import string
+diap = input("Please, enter laters with '-': ")
+letters = string.ascii_letters
+first = diap[0]
+last = diap[-1]
+print(letters[letters.index(first):letters.index(last) + 1])
+
+
+
 # hw_6.2
 # Конвертер із числа в дату
 # Ваше завдання — написати програму, яка переводить число у формат часу у читальному вигляді.
@@ -57,16 +77,16 @@
 # 33 -> 9
 # 25 -> 0
 # 1 -> 1
-print("Please, enter number: ")
-number = int(input())
-
-while number > 9:
-    multi1 = 1
-
-    while number > 0:
-        multi1 *= number % 10
-        number //= 10
-    number = multi1
-
-print("Result:", number)
+# print("Please, enter number: ")
+# number = int(input())
+#
+# while number > 9:
+#     multi1 = 1
+#
+#     while number > 0:
+#         multi1 *= number % 10
+#         number //= 10
+#     number = multi1
+#
+# print("Result:", number)
 
