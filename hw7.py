@@ -76,17 +76,38 @@
 # assert second_index("Hello, hello", "lo") == 10, 'Test4'
 # print('ОК')
 
-def second_index(text, some_str):
-  first = text.find(some_str)
-  if first == -1:
-    return None
-  second = text.find(some_str, first + len(some_str))
-  if second == -1:
-    return None
-  return second
+# def second_index(text, some_str):
+#   first = text.find(some_str)
+#   if first == -1:
+#     return None
+#   second = text.find(some_str, first + len(some_str))
+#   if second == -1:
+#     return None
+#   return second
+#
+# assert second_index("sims", "s") == 3, 'Test1'
+# assert second_index("find the river", "e") == 12, 'Test2'
+# assert second_index("hi", "h") is None, 'Test3'
+# assert second_index("Hello, hello", "lo") == 10, 'Test4'
+# print('ОК')
 
-assert second_index("sims", "s") == 3, 'Test1'
-assert second_index("find the river", "e") == 12, 'Test2'
-assert second_index("hi", "h") is None, 'Test3'
-assert second_index("Hello, hello", "lo") == 10, 'Test4'
+
+# hw_7.4
+# Пошук спільних елементів
+# Напишіть функцію common_elements, яка згенерує два списки елементів з генераторного виразу
+# (range) для 100 елементів, за наступними правилом:
+# Один список з числами кратними 3, інший з кратними числами 5.
+# За допомогою множин створіть набір з числами, які є в обох множинах (перетин).
+# Функція повинна повернути цю множину як результат своєї роботи.
+# def common_elements():
+# 		pass
+# assert common_elements() == {0, 75, 45, 15, 90, 60, 30}
+
+def common_elements():
+  list_3 = set(range(0, 101, 3))
+  list_5 = set(range(0, 101, 5))
+  return list_3 & list_5
+
+
+assert common_elements() == {0, 75, 45, 15, 90, 60, 30}
 print('ОК')
