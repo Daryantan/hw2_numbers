@@ -16,19 +16,45 @@
 # assert add_one([0]) == [1], 'Test3'
 # assert add_one([9]) == [1, 0], 'Test4'
 # print("ОК")
-def add_one(some_list):
-    i = 0
-    nstr = ''
-    for let in some_list:
-        if let !=',' and let !=' ':
-            nstr = nstr + str(let)
-            i += 1
-    nstr = int(nstr) + 1
-    lnstr = [int(x) for x in str(nstr)]
-    return lnstr
+# def add_one(some_list):
+#     i = 0
+#     nstr = ''
+#     for let in some_list:
+#         if let !=',' and let !=' ':
+#             nstr = nstr + str(let)
+#             i += 1
+#     nstr = int(nstr) + 1
+#     lnstr = [int(x) for x in str(nstr)]
+#     return lnstr
+#
+# assert add_one([1, 2, 3, 4]) == [1, 2, 3, 5], 'Test1'
+# assert add_one([9, 9, 9]) == [1, 0, 0, 0], 'Test2'
+# assert add_one([0]) == [1], 'Test3'
+# assert add_one([9]) == [1, 0], 'Test4'
+# print("ОК")
 
-assert add_one([1, 2, 3, 4]) == [1, 2, 3, 5], 'Test1'
-assert add_one([9, 9, 9]) == [1, 0, 0, 0], 'Test2'
-assert add_one([0]) == [1], 'Test3'
-assert add_one([9]) == [1, 0], 'Test4'
+# hw_8.2
+#  Паліандром
+# Ваше завдання – написати функцію is_palindrome, яка перевірятиме, чи є рядок паліндромом.
+# Паліндромом - це такий рядок, який читається однаково зліва направо і зправа наліво
+# без урахування знаків пунктуації та розмірності букв.
+# Функція приймає на вхід рядок, та повертає булеве значення True або False
+# Приклад:
+# def is_palindrome(text):
+#     pass
+# assert is_palindrome('A man, a plan, a canal: Panama') == True, 'Test1'
+# assert is_palindrome('0P') == False, 'Test2'
+# assert is_palindrome('a.') == True, 'Test3'
+# assert is_palindrome('aurora') == False, 'Test4'
+# print("ОК")
+def is_palindrome(text):
+    ntext = ''.join(let.lower() for let in text if let.isalnum())
+    ntext_2 = ntext[::-1]
+    return ntext == ntext_2
+
+
+assert is_palindrome('A man, a plan, a canal: Panama') == True, 'Test1'
+assert is_palindrome('0P') == False, 'Test2'
+assert is_palindrome('a.') == True, 'Test3'
+assert is_palindrome('aurora') == False, 'Test4'
 print("ОК")
