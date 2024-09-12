@@ -74,12 +74,9 @@
 # print("ОК")
 
 def find_unique_value(some_list):
-   unique = int
    for number in some_list:
       if some_list.count(number) == 1:
-         unique = number
-
-   return unique
+         return number
 
 assert find_unique_value([1, 2, 1, 1]) == 2, 'Test1'
 assert find_unique_value([2, 3, 3, 3, 5, 5]) == 2, 'Test2'
