@@ -121,21 +121,22 @@ print(is_valid)
 # 'Should, I. subscribe? Yes!' -> #ShouldISubscribeYes
 # 't!e@s#t t%e^s&t' => #TestTest
 
-# #my_str = "Python Community"
-# my_str = "i like python community!"
-# #my_str = "Should, I. subscribe? Yes!"
-# #my_str = "t!e@s#t t%e^s&t"
-# nstr = ''
-# my_str = my_str.title()
-#
-#
-# i = 0
-# for let in my_str:
-#     if let !='!' and let !=',' and let !='@' and let !='.' and let !='?' and let !='#' and let !='^' and let !='%' and let !='&' and let !=' ':
-#         nstr = nstr + let
-#         i += 1
-# if len(nstr)<140:
-#     print("#" + nstr, sep='')
-# else:
-#     len(nstr)//2
-#     print("#" + nstr, sep='')
+# my_str = "Python Community"
+my_str = "i like python community!"
+# my_str = "Should, I. subscribe? Yes!"
+# my_str = "t!e@s#t t%e^s&t"
+nstr = ''
+my_str = my_str.title()
+
+
+i = 0
+for let in my_str:
+    if let !='!' and let !=',' and let !='@' and let !='.' and let !='?' and let !='#' and let !='^' and let !='%' and let !='&' and let !=' ':
+        nstr = nstr.capitalize()
+        nstr = nstr + let
+        i += 1
+if len(nstr)<140:
+    print("#" + nstr, sep='')
+else:
+    len(nstr)//2
+    print("#" + nstr, sep='')
