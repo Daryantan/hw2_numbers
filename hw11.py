@@ -45,22 +45,46 @@
 # починаючи з числа 2 до вказаної Вами величини. Тобто.
 # генератор повинен працювати доти, поки генерується значення менше зазначеної величини.
 # Нагадую, що вийти із генератора можна за допомогою return без параметрів.
-def generate_cube_numbers(end):
-    n = 2
-    while True:
-        cube = n ** 3
-        if cube > end:
-            return
-        yield cube
-        n += 1
+# def generate_cube_numbers(end):
+#     n = 2
+#     while True:
+#         cube = n ** 3
+#         if cube > end:
+#             return
+#         yield cube
+#         n += 1
+#
+# from inspect import isgenerator
+#
+# gen = generate_cube_numbers(1)
+# assert isgenerator(gen) == True, 'Test0'
+# assert list(generate_cube_numbers(10)) == [8], 'оскільки воно менше 10.'
+# assert list(generate_cube_numbers(100)) == [8, 27, 64], '5 у кубі це 125, а воно вже більше 100'
+# assert list(generate_cube_numbers(1000)) == [8, 27, 64, 125, 216, 343, 512, 729, 1000], '10 у кубі це 1000'
+#
+# print('Ok')
 
-from inspect import isgenerator
+# hw_11.3
+# Перевірка на парність.
+# Завдання ускладнюється.
+# Ваша функція is_even, як і раніше, повинна повертати True якщо число парне, або False якщо число непарне,
+# але при цьому НЕ МОЖНА використовувати ділення у функції, та дії пов('язані з ним.
+# Тобто. заборонено використовувати /, //, % та divmod)
+# Складність ще полягає і в тому, щоб знайти рішення, яке не залежало б від розміру числа :)
+# Вхідні дані: Ціле число.
+# Вихідні дані: True або False
+# def is_even(number):
+#     pass
+#
+# assert is_even(2494563894038**2) == True, 'Test1'
+# assert is_even(1056897**2) == False, 'Test2'
+# assert is_even(24945638940387**3) == False, 'Test3'
 
-gen = generate_cube_numbers(1)
-assert isgenerator(gen) == True, 'Test0'
-assert list(generate_cube_numbers(10)) == [8], 'оскільки воно менше 10.'
-assert list(generate_cube_numbers(100)) == [8, 27, 64], '5 у кубі це 125, а воно вже більше 100'
-assert list(generate_cube_numbers(1000)) == [8, 27, 64, 125, 216, 343, 512, 729, 1000], '10 у кубі це 1000'
+def is_even(number):
+    return (number & 1) == 0
 
-print('Ok')
+assert is_even(2494563894038**2) == True, 'Test1'
+assert is_even(1056897**2) == False, 'Test2'
+assert is_even(24945638940387**3) == False, 'Test3'
 
+print('OK')
